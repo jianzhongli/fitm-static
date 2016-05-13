@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>凌晨四点线上作业提交系统</title>
+    </head>
+
+    <body class="grey lighten-5">
+        <nav class="indigo">
+            <div class="nav-wrapper container">
+                <a href="/" class="brand-logo">凌晨四点</a>
+                <a href="#" data-activates="mobile-side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="overview.html">总览</a></li>
+                    <li><a href="courses.html">课程</a></li>
+                    <li><a href="notification.html">通知</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button" data-activates="dropdown-main">黎建忠 (13354146)
+                        <i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+
+                <ul class="side-nav" id="mobile-side-nav">
+                    <li><a class="waves-effect" href="">总览</a></li>
+                    <li><a class="waves-effect" href="courses.html">课程</a></li>
+                    <li><a class="waves-effect" href="notification.html">通知</a></li>
+                    <li><a class="waves-effect" onclick="logout()">退出</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown-main" class="dropdown-content">
+            <li><a href="edit_password.html">修改密码</a></li>
+            <li><a onclick="logout()">退出</a></li>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <div class="col l3">
+                    <ul class="collection">
+                        <a class="collection-item active" href="notification.html">未读通知<i class="material-icons right">play_arrow</i></a>
+                        <a class="collection-item" href="notification-all.html">全部通知<i class="material-icons right hide">play_arrow</i></a>
+                        <a class="collection-item" href="#!">网络安全<i class="material-icons right hide">play_arrow</i></a>
+                        <a class="collection-item" href="#!">移动交互设计<i class="material-icons right hide">play_arrow</i></a>
+                    </ul>
+                </div>
+                <div class="col l9">
+                    <div class="row">
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <button class="waves-effect waves-light btn right" onclick="hide_parent(this)">已阅</button>
+                                <h6>2016年5月11日</h6>
+                                <p>明天实验课不用上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <button class="waves-effect waves-light btn right" onclick="hide_parent(this)">已阅</button>
+                                <h6>2016年5月8日</h6>
+                                <p>Lab14已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/header.js" ></script>
+        <script type="text/javascript" src="js/notification.js"></script>
+    </body>
+</html>
