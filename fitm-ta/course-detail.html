@@ -1,0 +1,295 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>凌晨四点线上作业提交系统</title>
+</head>
+
+<body class="grey lighten-5">
+
+<nav class="indigo">
+    <div class="nav-wrapper container">
+        <a href="promotion.html" class="brand-logo">凌晨四点</a>
+        <a href="#" data-activates="mobile-side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="overview.html">总览</a></li>
+            <li><a href="courses.html">课程</a></li>
+            <li><a href="notification.html">通知</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-button" data-activates="dropdown-main">黎建忠 (13354146)
+                <i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+
+        <ul class="side-nav" id="mobile-side-nav">
+            <li><a class="waves-effect" href="">总览</a></li>
+            <li><a class="waves-effect" href="courses.html">课程</a></li>
+            <li><a class="waves-effect" href="notification.html">通知</a></li>
+            <li><a class="waves-effect" onclick="logout()">退出</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Dropdown Structure -->
+<ul id="dropdown-main" class="dropdown-content">
+    <li><a href="edit_password.html">修改密码</a></li>
+    <li><a onclick="logout()">退出</a></li>
+</ul>
+
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <div class="section">
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col s3"><a class="active" href="#overview">课程总览</a></li>
+                            <li class="tab col s3"><a href="#slides">课件下载</a></li>
+                            <li class="tab col s3"><a href="#homework">查看作业</a></li>
+                        </ul>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" >
+                <div class="col s12" id="overview">
+                    <div class="section">
+                        <h3>
+                            数据挖掘
+                        </h3>
+                    </div>
+                    <div class="section">
+                        <h4>
+                            课程简介
+                        </h4>
+                        <div class="divider"></div>
+                        这是课程介绍的文字
+                    </div>
+                    <div class="section">
+                        <h4>
+                            助教名单
+                        </h4>
+                        <div class="divider"></div>
+                        <h5>周四 2-3 节</h6>
+                        <table class="table highlight bordered">
+                            <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>邮箱</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>黎建忠</td>
+                                <td>lijzh9@mail2.sysu.edu.cn</td>
+                            </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                        <h5>周四 4-5 节</h6>
+                        <table class="table highlight bordered">
+                            <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>邮箱</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>黎建忠</td>
+                                <td>lijzh9@mail2.sysu.edu.cn</td>
+                            </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12" id="slides">
+                    <table class="table highlight bordered">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Date</th>
+                            <th>Topic</th>
+                            <th>Slides</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>9</td>
+                            <td>2016.05.09</td>
+                            <td>Leture 9: C++ Stream Input and Output</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 09.pdf"  target="_blank">Lecture 09.pdf</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>2016.04.18</td>
+                            <td>Leture 8: C++ Polymorphism</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 08.pdf"  target="_blank">Lecture 08.pdf</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>2016.04.11</td>
+                            <td>Leture 7: C++ Inheritance</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 07.pdf"  target="_blank">Lecture 07.pdf</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>2016.03.28</td>
+                            <td>Leture 6: C++ Operator Overloading</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 06.pdf"  target="_blank">Lecture 06.pdf</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2016.03.21</td>
+                            <td>Leture 5: C++ Classes</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 05.pdf"  target="_blank">Lecture 05.pdf</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2016.03.14</td>
+                            <td>Leture 4: C++ Classes</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 04.pdf"  target="_blank">Lecture 04.pdf</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2016.03.07</td>
+                            <td>Leture 3: Object & Class</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 03.pdf"  target="_blank">Lecture 03.pdf</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2016.02.29</td>
+                            <td>Leture 2: Recap of SDI</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 02.pdf"  target="_blank">Lecture 02.pdf</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2016.02.22</td>
+                            <td>Leture 1: Intruduction</td>
+                            <td id="si1">
+                            <a href="slides/Lecture 01(A).pdf"  target="_blank">Lecture 01(A).pdf</a> <br>
+                            <a href="slides/Lecture 01(B).pdf"  target="_blank">Lecture 01(B).pdf</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="homework"
+                <div class="row">
+                    <div class="col s12 l10 offset-l1" >
+                        <ul class="collapsible popout" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header active">
+                                    某次作业的标题
+                                </div>
+                                <div class="collapsible-body">
+                                    <p class="homework-post-body">The well known Pythagorean theorem \(x^2 + y^2 = z^2\) was proved to be invalid for other exponents. Meaning the next equation has no integer solutions:\[ x^n + y^n = z^n \]
+                                    </p>
+                                    <a class="btn waves-effect waves-light homework-post-action" href="#">下载附件</a>
+
+                                    <div class="divider"></div>
+                                    <div style="width: 100%">
+                                        <div class="right-align">
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="open_submit_homework_modal('')">交作业</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    某次作业的标题
+                                </div>
+                                <div class="collapsible-body">
+                                    <p class="homework-post-body">The well known Pythagorean theorem \(x^2 + y^2 = z^2\) was proved to be invalid for other exponents. Meaning the next equation has no integer solutions:\[ x^n + y^n = z^n \]
+                                    </p>
+                                    <a class="btn waves-effect waves-light homework-post-action" href="#">下载附件</a>
+
+                                    <div class="divider"></div>
+                                    <div style="width: 100%">
+                                        <div class="right-align">
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="open_submit_homework_modal('')">交作业</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    某次作业的标题
+                                </div>
+                                <div class="collapsible-body">
+                                    <p class="homework-post-body">The well known Pythagorean theorem \(x^2 + y^2 = z^2\) was proved to be invalid for other exponents. Meaning the next equation has no integer solutions:\[ x^n + y^n = z^n \]
+                                    </p>
+                                    <a class="btn waves-effect waves-light homework-post-action" href="#">下载附件</a>
+
+                                    <div class="divider"></div>
+                                    <div style="width: 100%">
+                                        <div class="right-align">
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="open_submit_homework_modal('')">交作业</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/header.js" type="application/javascript"></script>
+<script src="js/course-detail.js" type="application/javascript"></script>
+<script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</body>
+
+<div id="modal-submit-homework" class="modal">
+    <div class="modal-content">
+        <h5>提交作业</h5>
+        <form enctype="multipart/form-data">
+            <div class="row">
+                <div class="file-field input-field col s12">
+                    <div class="btn">
+                        <span>点击上传作业附件</span>
+                        <input id="submission_attach_file" type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-light btn" onclick="submit_homework_to_server()">提交</a>
+        <a class="modal-action modal-close btn-flat" href="#">取消</a>
+    </div>
+</div>
+</html>

@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>凌晨四点线上作业提交系统</title>
+    </head>
+
+    <body class="grey lighten-5">
+        <nav class="indigo">
+            <div class="nav-wrapper container">
+                <a href="promotion.html" class="brand-logo">凌晨四点</a>
+                <a href="#" data-activates="mobile-side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="overview.html">总览</a></li>
+                    <li><a href="courses.html">课程</a></li>
+                    <li><a href="notification.html">通知</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button" data-activates="dropdown-main">黎建忠 (13354146)
+                        <i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+
+                <ul class="side-nav" id="mobile-side-nav">
+                    <li><a class="waves-effect" href="">总览</a></li>
+                    <li><a class="waves-effect" href="courses.html">课程</a></li>
+                    <li><a class="waves-effect" href="notification.html">通知</a></li>
+                    <li><a class="waves-effect" onclick="logout()">退出</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown-main" class="dropdown-content">
+            <li><a href="edit_password.html">修改密码</a></li>
+            <li><a onclick="logout()">退出</a></li>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <div class="col l3">
+                    <ul class="collection">
+                        <a class="collection-item" onclick="show_unread_notification()" href="#">未读通知</a>
+                        <a class="collection-item" onclick="show_all_notification()" href="#">全部通知</a>
+                        <a class="collection-item" href="#">网络安全</a>
+                        <a class="collection-item" href="#">移动交互设计</a>
+                    </ul>
+                </div>
+                <div class="col l9" id="unread-notification">
+                    <div class="row">
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <button class="waves-effect waves-light btn right" onclick="hide_parent(this)">已阅</button>
+                                <h6>2016年5月11日</h6>
+                                <p>明天实验课不用上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <button class="waves-effect waves-light btn right" onclick="hide_parent(this)">已阅</button>
+                                <h6>2016年5月8日</h6>
+                                <p>Lab14已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col l9" id="all-notification">
+                    <div class="row">
+                        <ul class="collection" id="coll-1">
+                            <li class="collection-item">
+                                <h6>2016年5月11日</h6>
+                                <p>明天实验课不用上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年5月8日</h6>
+                                <p>Lab14已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年5月4日</h6>
+                                <p>Lab13已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月30日</h6>
+                                <p>请大家尽快组队，并上交报名信息</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                        <ul class="collection hide" id="coll-2">
+                            <li class="collection-item">
+                                <h6>2016年4月30日</h6>
+                                <p>实验课请带自己的电脑来上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月28日</h6>
+                                <p>Lab12已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月25日</h6>
+                                <p>Lab11已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月24日</h6>
+                                <p>如果实验内容已经完成，可以不用来上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                        <ul class="collection hide" id="coll-3">
+                            <li class="collection-item">
+                                <h6>2016年4月23日</h6>
+                                <p>明天实验课不用上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月22日</h6>
+                                <p>Lab14已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月21日</h6>
+                                <p>Lab13已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月20日</h6>
+                                <p>请大家尽快组队，并上交报名信息</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                        <ul class="collection hide" id="coll-4">
+                            <li class="collection-item">
+                                <h6>2016年4月19日</h6>
+                                <p>明天实验课不用上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月18日</h6>
+                                <p>Lab14已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月17日</h6>
+                                <p>Lab13已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月16日</h6>
+                                <p>请大家尽快组队，并上交报名信息</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                        <ul class="collection hide" id="coll-5">
+                            <li class="collection-item">
+                                <h6>2016年4月11日</h6>
+                                <p>明天实验课不用上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月10日</h6>
+                                <p>Lab14已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月4日</h6>
+                                <p>Lab13已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月1日</h6>
+                                <p>请大家尽快组队，并上交报名信息</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <ul class="pagination center-align" id="Pagination">
+                            <li class="disabled" onclick="paginate(curPage - 1)" id="pagin-up"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                            <li class="active disabled" onclick="paginate(1)" id="pagin-1"><a href="#!">1</a></li>
+                            <li class="waves-effect" onclick="paginate(2)" id="pagin-2"><a href="#!">2</a></li>
+                            <li class="waves-effect" onclick="paginate(3)" id="pagin-3"><a href="#!">3</a></li>
+                            <li class="waves-effect" onclick="paginate(4)" id="pagin-4"><a href="#!">4</a></li>
+                            <li class="waves-effect" onclick="paginate(5)" id="pagin-5"><a href="#!">5</a></li>
+                            <li class="waves-effect" onclick="paginate(curPage + 1)" id="pagin-down"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/header.js" ></script>
+        <script type="text/javascript" src="js/notification.js"></script>
+    </body>
+</html>

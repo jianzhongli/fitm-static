@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>凌晨四点线上作业提交系统</title>
+    </head>
+
+    <body class="grey lighten-5">
+        <nav class="indigo">
+            <div class="nav-wrapper container">
+                <a href="promotion.html" class="brand-logo">凌晨四点</a>
+                <a href="#" data-activates="mobile-side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="overview.html">总览</a></li>
+                    <li><a href="courses.html">课程</a></li>
+                    <li><a href="notification.html">通知</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button" data-activates="dropdown-main">黎建忠 (13354146)
+                        <i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+
+                <ul class="side-nav" id="mobile-side-nav">
+                    <li><a class="waves-effect" href="">总览</a></li>
+                    <li><a class="waves-effect" href="courses.html">课程</a></li>
+                    <li><a class="waves-effect" href="notification.html">通知</a></li>
+                    <li><a class="waves-effect" onclick="logout()">退出</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown-main" class="dropdown-content">
+            <li><a href="edit_password.html">修改密码</a></li>
+            <li><a onclick="logout()">退出</a></li>
+        </ul>
+
+        <div class="container">
+            <div class="section">
+                <h5>我的课程</h5>
+                <div class="divider"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card hoverable">
+                            <div class="card-content">
+                                <div class="card-title">数据挖掘</div>
+                                <p>Chnagdong Wang</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="course-detail.html">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hoverable">
+                            <div class="card-content">
+                                <div class="card-title">移动交互设计</div>
+                                <p>Shaoke Zhang</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="promotion.html">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hoverable">
+                            <div class="card-content">
+                                <div class="card-title">移动交互设计</div>
+                                <p>Shaoke Zhang</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="/courses/${course.course_id}">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hoverable">
+                            <div class="card-content">
+                                <div class="card-title">移动交互设计</div>
+                                <p>Shaoke Zhang</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="/courses/${course.course_id}">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hoverable">
+                            <div class="card-content">
+                                <div class="card-title">移动交互设计</div>
+                                <p>Shaoke Zhang</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="/courses/${course.course_id}">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <c:if test="${user.isAssistant()}">
+                <div class="section">
+                    <h5>助教课程</h5>
+                    <div class="divider"></div>
+                    <div class="row">
+                            <div class="col">
+                                <div class="card hoverable">
+                                    <div class="card-content">
+                                        <div class="card-title">数据挖掘</div>
+                                        <p>Changdong Wang</p>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="/courses/${assistant_course.course_id}">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </c:if>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/header.js" type="application/javascript"></script>
+    </body>
+</html>
