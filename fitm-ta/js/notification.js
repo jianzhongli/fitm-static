@@ -89,9 +89,31 @@ function get_current_time() {
 }
 
 function add_notification() {
-    if (window.currentTag == "网络安全") {
-        var newTag = "<li class=\"collection-item\"><h6>" + get_current_time() + "</h6><p>" + $('notification-input').text() + "</p><h6 class=\"right-align\">From: 网络安全 黎建忠 TA</h6></li>";
-        $('#netsecure-notification').find("ul.collection")[0].prepend(newTag);
+    if (!$('#notification-input').val().trim()) {
+        Materialize.toast('请输入通知内容', 2000);
+        return;
     }
-    Materialize.toast('添加成功', 4000);
+    var newTag = "<li class=\"collection-item\">"
+               +     "<button class=\"waves-effect waves-light btn right\" onclick=\"hide_parent(this)\">已阅</button>"
+               +     "<h6>" + get_current_time() + "</h6>"
+               +     "<p>" + $('#notification-input').val().trim() + "</p>"
+               +     "<h6 class=\"right-align\">From: " + window.currentTag + " 黎建忠 TA</h6>"
+               + "</li>";
+    $('#unread-notification ul.collection').prepend(newTag);
+    newTag = "<li class=\"collection-item\">"
+           +     "<h6>" + get_current_time() + "</h6>"
+           +     "<p>" + $('#notification-input').val().trim() + "</p>"
+           +     "<h6 class=\"right-align\">From: " + window.currentTag + " 黎建忠 TA</h6>"
+           + "</li>";
+    $('#all-notification ul.collection#coll-1').children(":last").remove();
+    // $('#all-notification').find("ul.collection")[0].prepend(newTag);
+    $('#all-notification ul.collection#coll-1').prepend(newTag);
+
+    if (window.currentTag == "网络安全") {
+        $('#netsecure-notification ul.collection').prepend(newTag);
+    } else if (window.currentTag == "移动交互设计") {
+        $('#appui-notification ul.collection').prepend(newTag);
+    }
+    Materialize.toast('添加成功', 2000);
+    $('#notification-input').val("");
 }
