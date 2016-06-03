@@ -31,6 +31,9 @@ function paginate(index) {
 window.onload = function() {
     show_unread_notification();
     window.curPage = 1;
+    $('.modal-trigger').leanModal();
+    $('notification-input').val('New Text');
+    $('notification-input').trigger('autoresize');
 }
 
 function show_unread_notification() {
@@ -40,6 +43,7 @@ function show_unread_notification() {
     $('#unread-notification').show();
     $("#type-of-notification").children().removeClass("active");
     $("#type-of-notification").children(":first-child").addClass("active");
+    $('#add-notification-btn').hide();
 }
 
 function show_all_notification() {
@@ -49,6 +53,7 @@ function show_all_notification() {
     $('#all-notification').show();
     $("#type-of-notification").children().removeClass("active");
     $("#type-of-notification").children(":nth-child(2)").addClass("active");
+    $('#add-notification-btn').hide();
 }
 
 function show_netsecure_notification() {
@@ -58,6 +63,7 @@ function show_netsecure_notification() {
     $('#netsecure-notification').show();
     $("#type-of-notification").children().removeClass("active");
     $("#type-of-notification").children(":nth-child(3)").addClass("active");
+    $('#add-notification-btn').show();
 }
 
 function show_appui_notification() {
@@ -67,4 +73,9 @@ function show_appui_notification() {
     $('#appui-notification').show();
     $("#type-of-notification").children().removeClass("active");
     $("#type-of-notification").children(":nth-child(4)").addClass("active");
+    $('#add-notification-btn').show();
+}
+
+function add_notification() {
+    Materialize.toast('添加成功', 4000);
 }
