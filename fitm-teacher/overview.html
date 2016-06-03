@@ -39,47 +39,237 @@
             <li><a href="edit_password.html">修改密码</a></li>
             <li><a onclick="logout()">退出</a></li>
         </ul>
-
-        <div class="container">
-            <div class="row">
-                <div class="col s8">
-                    <div class="section">
-                        <h5>最新动态</h5>
-                        <div class="divider"></div>
-                        <h6>${user.getName()} 43 分钟前 发布了作业</h6>
-
-                        <div class="progress">
-                            <div class="determinate" style="width: 70%"></div>
-                        </div>
-
-                        <p>Stuff</p>
-                    </div>
-                </div>
-                <div class="col s4">
-                    <div class="collection">
-                        <a href="#" class="collection-item">交作业</a>
-                        <a href="" class="collection-item">第二个操作</a>
-                        <a href="" class="collection-item">第三个操作</a>
-                        <a href="" class="collection-item">第四个操作</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12">
-                    <ul class="collection with-header">
-                        <li class="collection-header"><h4>First Names</h4></li>
-                        <li class="collection-item">Alvin</li>
-                        <li class="collection-item">Alvin</li>
-                        <li class="collection-item">Alvin</li>
-                        <li class="collection-item">Alvin</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+		
+		<div class="container">
+			<div class="row">
+				<div class="col l8">
+					<h4>查看作业详情</h4>
+					<div class="collection">
+						<a href="course-detail.html#homework" class="collection-item">网络安全 Lab 5</a>
+						<a href="course-detail.html#homework" class="collection-item">移动应用交互设计 Assignment 8</a>
+					</div>	
+					<h4>发布一个课程作业</h4>	
+					<div class="collection">
+						<a href="course-detail.html#homework" class="collection-item">数据挖掘</a>
+						<a href="course-detail.html#homework" class="collection-item">移动应用交互设计</a>
+					</div>
+					<h4>发布一个课程通知</h4>	
+					<div class="collection">
+						<a href="course-detail.html#homework" class="collection-item">数据挖掘</a>
+						<a href="course-detail.html#homework" class="collection-item">移动应用交互设计</a>
+					</div>					
+				</div>
+				<div class="col l4">	
+					<div class="picker__calendar-container">
+					  <div class="picker__header">
+						<div class="picker__month">June</div>
+						<select class="picker__select--year browser-default" aria-controls="birthdate_table" title="Select a year">
+						  <option value="2006">2006</option>
+						  <option value="2007">2007</option>
+						  <option value="2008">2008</option>
+						  <option value="2009">2009</option>
+						  <option value="2010">2010</option>
+						  <option value="2011">2011</option>
+						  <option value="2012">2012</option>
+						  <option value="2013">2013</option>
+						  <option value="2014">2014</option>
+						  <option value="2015">2015</option>
+						  <option value="2016" selected="">2016</option>
+						  <option value="2017">2017</option>
+						  <option value="2018">2018</option>
+						  <option value="2019">2019</option>
+						  <option value="2020">2020</option>
+						  <option value="2021">2021</option>
+						  <option value="2022">2022</option>
+						  <option value="2023">2023</option>
+						  <option value="2024">2024</option>
+						  <option value="2025">2025</option>
+						  <option value="2026">2026</option></select>
+						<div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="birthdate_table" title="Previous month"></div>
+						<div class="picker__nav--next" data-nav="1" role="button" aria-controls="birthdate_table" title="Next month"></div>
+					  </div>
+					  <table class="picker__table" id="birthdate_table" role="grid" aria-controls="birthdate" aria-readonly="true">
+						<thead>
+						  <tr>
+							<th class="picker__weekday" scope="col" title="Sunday">S</th>
+							<th class="picker__weekday" scope="col" title="Monday">M</th>
+							<th class="picker__weekday" scope="col" title="Tuesday">T</th>
+							<th class="picker__weekday" scope="col" title="Wednesday">W</th>
+							<th class="picker__weekday" scope="col" title="Thursday">T</th>
+							<th class="picker__weekday" scope="col" title="Friday">F</th>
+							<th class="picker__weekday" scope="col" title="Saturday">S</th></tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1464451200000" role="gridcell" aria-label="29 May, 2016">29</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1464537600000" role="gridcell" aria-label="30 May, 2016">30</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1464624000000" role="gridcell" aria-label="31 May, 2016">31</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1464710400000" role="gridcell" aria-label="1 June, 2016">1</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus picker__day--today" data-pick="1464796800000" role="gridcell" aria-label="2 June, 2016">2</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1464883200000" role="gridcell" aria-label="3 June, 2016">3</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1464969600000" role="gridcell" aria-label="4 June, 2016">4</div></td>
+						  </tr>
+						  <tr>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465056000000" role="gridcell" aria-label="5 June, 2016">5</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465142400000" role="gridcell" aria-label="6 June, 2016">6</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465228800000" role="gridcell" aria-label="7 June, 2016">7</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465315200000" role="gridcell" aria-label="8 June, 2016">8</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465401600000" role="gridcell" aria-label="9 June, 2016">9</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465488000000" role="gridcell" aria-label="10 June, 2016">10</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465574400000" role="gridcell" aria-label="11 June, 2016">11</div></td>
+						  </tr>
+						  <tr>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465660800000" role="gridcell" aria-label="12 June, 2016">12</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465747200000" role="gridcell" aria-label="13 June, 2016">13</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465833600000" role="gridcell" aria-label="14 June, 2016">14</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1465920000000" role="gridcell" aria-label="15 June, 2016">15</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466006400000" role="gridcell" aria-label="16 June, 2016">16</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466092800000" role="gridcell" aria-label="17 June, 2016">17</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466179200000" role="gridcell" aria-label="18 June, 2016">18</div></td>
+						  </tr>
+						  <tr>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466265600000" role="gridcell" aria-label="19 June, 2016">19</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466352000000" role="gridcell" aria-label="20 June, 2016">20</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus picker__day--selected picker__day--highlighted" data-pick="1466438400000" role="gridcell" aria-label="21 June, 2016" aria-selected="true" aria-activedescendant="true">21</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466524800000" role="gridcell" aria-label="22 June, 2016">22</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466611200000" role="gridcell" aria-label="23 June, 2016">23</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466697600000" role="gridcell" aria-label="24 June, 2016">24</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466784000000" role="gridcell" aria-label="25 June, 2016">25</div></td>
+						  </tr>
+						  <tr>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466870400000" role="gridcell" aria-label="26 June, 2016">26</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1466956800000" role="gridcell" aria-label="27 June, 2016">27</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1467043200000" role="gridcell" aria-label="28 June, 2016">28</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1467129600000" role="gridcell" aria-label="29 June, 2016">29</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--infocus" data-pick="1467216000000" role="gridcell" aria-label="30 June, 2016">30</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467302400000" role="gridcell" aria-label="1 July, 2016">1</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467388800000" role="gridcell" aria-label="2 July, 2016">2</div></td>
+						  </tr>
+						  <tr>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467475200000" role="gridcell" aria-label="3 July, 2016">3</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467561600000" role="gridcell" aria-label="4 July, 2016">4</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467648000000" role="gridcell" aria-label="5 July, 2016">5</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467734400000" role="gridcell" aria-label="6 July, 2016">6</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467820800000" role="gridcell" aria-label="7 July, 2016">7</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467907200000" role="gridcell" aria-label="8 July, 2016">8</div></td>
+							<td role="presentation">
+							  <div class="picker__day picker__day--outfocus" data-pick="1467993600000" role="gridcell" aria-label="9 July, 2016">9</div></td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+					<ul id="memo_ul" class="collection with-header">
+						<li class="collection-header">
+							<h4>我的备忘录</h4>
+							<p class="right-align">
+								<a onclick="add_memo()"; class="waves-effect waves-light"">
+									<i class="material-icons">add</i>
+								</a>
+							</p>
+						</li>
+						<li class="collection-item">
+							<div>
+								<span>有空的话写个HTTP protocol的总结</span>
+								<a onclick="memo_more(this)"; class="secondary-content waves-effect waves-light">
+									<i class="material-icons">keyboard_arrow_right</i>
+								</a>
+							</div>
+						</li>
+						<li class="collection-item">
+							<div>
+								<span>写论文讲故事，看论文去读懂故事</span>
+								<a onclick="memo_more(this)"; class="secondary-content waves-effect waves-light">
+									<i class="material-icons">keyboard_arrow_right</i>
+								</a>
+							</div>
+						</li>
+						<li class="collection-item">
+							<div>
+								<span>这个周六去香洲</span>
+								<a onclick="memo_more(this)"; class="secondary-content waves-effect waves-light">
+									<i class="material-icons">keyboard_arrow_right</i>
+								</a>
+							</div>
+						</li>
+						<li class="collection-item">
+							<div>
+								<span>这几天要记得回信</span>
+								<a onclick="memo_more(this)"; class="secondary-content waves-effect waves-light">
+									<i class="material-icons">keyboard_arrow_right</i>
+								</a>
+							</div>
+						</li>	
+					</ul>							
+				</div>
+			</div>
+		</div>
+		
+		<!-- Modal Structure -->
+		<div id="memo_modal" class="modal">
+			<div class="modal-content">
+				<h4>May 11, 2016, 11:40 AM</h4>
+					<div class="row">
+						<form class="col s12">
+							<div class="row">
+								<div class="input-field col s12">
+									<textarea placeholder="写个备忘录~" id="memo_text" class="materialize-textarea" value=""></textarea>
+									<label for="memo_text">备忘录</label>
+								</div>
+							</div>
+						</form>
+					</div>				
+			</div>
+			<div class="modal-footer">
+				<a id="memo_save" class="modal-action modal-close waves-effect waves-light btn">确定</a>
+				<a class="modal-action modal-close btn-flat" href="#">取消</a>
+				<p class="left"><i id="memo_delete" class="material-icons waves-effect waves-light">delete</i></p>
+			</div>
+		</div>
+		
         <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/header.js"></script>
+		<script src="js/overview.js" type="text/javascript"></script>
     </body>
 </html>
