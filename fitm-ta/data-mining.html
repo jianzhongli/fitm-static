@@ -46,6 +46,7 @@
                             <li class="tab col s3"><a class="active" href="#overview">课程总览</a></li>
                             <li class="tab col s3"><a href="#slides">课件下载</a></li>
                             <li class="tab col s3"><a href="#homework">查看作业</a></li>
+                            <li class="tab col s3"><a href="#student-list">学生列表</a></li>
                         </ul>
                         <div class="divider"></div>
                     </div>
@@ -107,8 +108,11 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col s12" id="slides">
+            <div class="row" id="slides">
+                <div class="col">
+                    <a class="waves-effect waves-light btn" onclick="open_upload_slide_modal()">上传课件 </a>
+                </div>
+                <div class="col s12" >
                     <table class="table highlight bordered">
                         <thead>
                         <tr>
@@ -197,11 +201,14 @@
                 </div>
             </div>
 
-            <div id="homework"
+            <div id="homework">
                 <div class="row">
+                    <div class="col offset-l1">
+                        <a class="btn waves-effect waves-light" onclick="post_new_homework()">发布作业</a>
+                    </div>
                     <div class="col s12 l10 offset-l1" >
                         <ul class="collapsible popout" data-collapsible="accordion">
-                            <li>
+                            <li id="li-to-be-deleted">
                                 <div class="collapsible-header active">
                                     某次作业的标题
                                 </div>
@@ -213,7 +220,9 @@
                                     <div class="divider"></div>
                                     <div style="width: 100%">
                                         <div class="right-align">
-                                            <a class="btn waves-effect waves-light homework-post-action" onclick="open_submit_homework_modal('')">交作业</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="delete_confirm()">删除</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="edit_homework('')">编辑</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" href="homework-submission-page.html">更多</a>
                                         </div>
                                     </div>
                                 </div>
@@ -230,7 +239,9 @@
                                     <div class="divider"></div>
                                     <div style="width: 100%">
                                         <div class="right-align">
-                                            <a class="btn waves-effect waves-light homework-post-action" onclick="open_submit_homework_modal('')">交作业</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="delete_confirm()">删除</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="edit_homework('')">编辑</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" href="homework-submission-page.html">更多</a>
                                         </div>
                                     </div>
                                 </div>
@@ -247,7 +258,28 @@
                                     <div class="divider"></div>
                                     <div style="width: 100%">
                                         <div class="right-align">
-                                            <a class="btn waves-effect waves-light homework-post-action" onclick="open_submit_homework_modal('')">交作业</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="delete_confirm()">删除</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="edit_homework('')">编辑</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" href="homework-submission-page.html">更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    某次作业的标题
+                                </div>
+                                <div class="collapsible-body">
+                                    <p class="homework-post-body">The well known Pythagorean theorem \(x^2 + y^2 = z^2\) was proved to be invalid for other exponents. Meaning the next equation has no integer solutions:\[ x^n + y^n = z^n \]
+                                    </p>
+                                    <a class="btn waves-effect waves-light homework-post-action" href="#">下载附件</a>
+
+                                    <div class="divider"></div>
+                                    <div style="width: 100%">
+                                        <div class="right-align">
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="delete_confirm()">删除</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" onclick="edit_homework('')">编辑</a>
+                                            <a class="btn waves-effect waves-light homework-post-action" href="homework-submission-page.html">更多</a>
                                         </div>
                                     </div>
                                 </div>
@@ -256,6 +288,48 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row" id="student-list">
+                <div class="col s12" >
+                    <table class="table highlight bordered">
+                        <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>学号</th>
+                            <th>邮箱</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>张三</td>
+                            <td>12345678</td>
+                            <td>zhangsan@sysu.edu.cn</td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>13354146</td>
+                            <td>zhangsan@sysu.edu.cn</td>
+                        </tr>
+                        <tr>
+                            <td>王五</td>
+                            <td>13354146</td>
+                            <td>zhangsan@sysu.edu.cn</td>
+                        </tr>
+                        <tr>
+                            <td>赵六</td>
+                            <td>13354146</td>
+                            <td>zhangsan@sysu.edu.cn</td>
+                        </tr>
+                        <tr>
+                            <td>钱七</td>
+                            <td>13354146</td>
+                            <td>zhangsan@sysu.edu.cn</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -292,4 +366,86 @@
         <a class="modal-action modal-close btn-flat" href="#">取消</a>
     </div>
 </div>
+
+<div id="modal-upload-slide" class="modal">
+    <div class="modal-content">
+        <h5>上传课件</h5>
+        <form enctype="multipart/form-data">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="slide-topic" type="text">
+                    <label for="slide-topic">课件主题</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="file-field input-field col s12">
+                    <div class="btn">
+                        <span>点击选择附件</span>
+                        <input id="slide-attach-file" type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-light btn" onclick="upload_slide_to_server()">提交</a>
+        <a class="modal-action modal-close btn-flat" href="#">取消</a>
+    </div>
+</div>
+
+<div id="modal-post-homework" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h5 id="post-homework-modal-title">发布作业</h5>
+        <form enctype="multipart/form-data">
+            <input id="course-id" type="hidden" value="${course.getCourse_id()}"></input>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="homework_title" type="text">
+                    <label for="homework_title">作业标题</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="homework_description" class="materialize-textarea"></textarea>
+                    <label for="homework_description">作业描述（支持 LaTeX 代码）</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s5">
+                    <input type="date" class="datepicker" id="ddl">
+                    <label for="ddl">点击选择期限</label>
+                </div>
+                <div class="file-field input-field col s7">
+                    <div class="btn">
+                        <span>附件</span>
+                        <input id="attach_file" type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-light btn" onclick="post_homework_to_server()">提交</a>
+        <a class="modal-action modal-close btn-flat" href="#">取消</a>
+    </div>
+</div>
+
+<div id="modal-delete-confirm" class="modal">
+    <div class="modal-content">
+        <h5>你确认要删除该作业吗？</h5>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-light btn red" onclick="delete_homework()">
+            确认
+        </a>
+        <a class="modal-action modal-close btn-flat green-text">取消</a>
+    </div>
+</div>
+
 </html>
