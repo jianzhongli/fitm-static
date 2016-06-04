@@ -35,14 +35,36 @@ window.onload = function() {
 
 function show_unread_notification() {
     $('#all-notification').hide();
+    $('#netsecure-notification').hide();
+    $('#appui-notification').hide();
     $('#unread-notification').show();
     $("#type-of-notification").children().removeClass("active");
     $("#type-of-notification").children(":first-child").addClass("active");
 }
 
 function show_all_notification() {
+    $('#netsecure-notification').hide();
+    $('#appui-notification').hide();
     $('#unread-notification').hide();
     $('#all-notification').show();
     $("#type-of-notification").children().removeClass("active");
     $("#type-of-notification").children(":nth-child(2)").addClass("active");
+}
+
+function show_netsecure_notification() {
+    $('#all-notification').hide();
+    $('#appui-notification').hide();
+    $('#unread-notification').hide();
+    $('#netsecure-notification').show();
+    $("#type-of-notification").children().removeClass("active");
+    $("#type-of-notification").children(":nth-child(3)").addClass("active");
+}
+
+function show_appui_notification() {
+    $('#all-notification').hide();
+    $('#netsecure-notification').hide();
+    $('#unread-notification').hide();
+    $('#appui-notification').show();
+    $("#type-of-notification").children().removeClass("active");
+    $("#type-of-notification").children(":nth-child(4)").addClass("active");
 }
