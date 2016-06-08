@@ -38,3 +38,8 @@ ul.tabs {
 .homework-post-action {
     margin: 10px 10px 10px 30px;
 }
+
+/*make all hoverable looks like clickable*/
+.hoverable {
+    cursor: pointer;
+}

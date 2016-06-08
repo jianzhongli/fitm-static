@@ -4,22 +4,11 @@ function edit_password(userid) {
     var confirm_password = document.getElementById("confirm-password").value;
     if (new_password != confirm_password) {
         Materialize.toast('密码不匹配！', 2000);
+    } else if (old_password == new_password) {
+        Materialize.toast('旧密码不能与新密码相同！', 2000);
     } else if (new_password.length > 0 && old_password.length > 0) {
-        var json = {"old-password": old_password, "password":new_password};
-        $.ajax({
-            url: '/ajax/user/' +userid,
-            type: 'PUT',
-            contentType: 'application/json',
-            data: JSON.stringify(json),
-            dataType: 'json',
-            success: function(response) {
-                if (!response.success) {
-                    Materialize.toast(response.msg, 2000);
-                } else { // 如果登录成功，重定向至用户个人主页
-                    Materialize.toast('修改成功！', 2000);
-                }
-            }
-        });
+        window.location.href = 'overview.html';
+        Materialize.toast('修改成功！', 2000);        
     }
 }
 
