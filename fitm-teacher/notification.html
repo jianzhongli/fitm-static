@@ -17,7 +17,7 @@
                     <li><a href="courses.html">课程</a></li>
                     <li><a href="notification.html">通知</a></li>
                     <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-button" data-activates="dropdown-main">黎建忠 (13354146)
+                    <li><a class="dropdown-button" data-activates="dropdown-main">Teacher X (66666666)
                         <i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
 
@@ -41,8 +41,8 @@
                     <ul class="collection" id="type-of-notification">
                         <a class="collection-item active" onclick="show_unread_notification()" href="#">未读通知</a>
                         <a class="collection-item" onclick="show_all_notification()" href="#">全部通知</a>
-                        <a class="collection-item" href="#">网络安全</a>
-                        <a class="collection-item" href="#">移动交互设计</a>
+                        <a class="collection-item" onclick="show_netsecure_notification()" href="#">网络安全</a>
+                        <a class="collection-item" onclick="show_appui_notification()" href="#">移动交互设计</a>
                     </ul>
                 </div>
                 <div class="col l9" id="unread-notification">
@@ -188,6 +188,72 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col l9" id="netsecure-notification">
+                    <div class="row">
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <h6>2016年5月11日</h6>
+                                <p>明天实验课不用上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年5月8日</h6>
+                                <p>Lab14已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月30日</h6>
+                                <p>请大家尽快组队，并上交报名信息</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col l9" id="appui-notification">
+                    <div class="row">
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <h6>2016年4月23日</h6>
+                                <p>明天实验课不用上课</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月22日</h6>
+                                <p>Lab14已经布置了</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                            <li class="collection-item">
+                                <h6>2016年4月20日</h6>
+                                <p>请大家尽快组队，并上交报名信息</p>
+                                <h6 class="right-align">From: 网络安全 凌璐 TA</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="add-notification-btn" class="fixed-action-btn" style="bottom: 45px; right: 45px;">
+            <a class="btn-floating btn-large teal waves-effect waves-light modal-trigger" href="#add-notification-modal">
+                <i class="material-icons">add</i>
+            </a>
+        </div>
+
+        <div id="add-notification-modal" class="modal">
+            <div class="modal-content">
+                <h4 id="notification-title">添加通知</h4>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="notification-input" class="materialize-textarea"></textarea>
+                            <label for="notification-input">请输入通知</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect waves-light btn" onclick="add_notification()">添加</a>
+                <a class="modal-action modal-close btn-flat">取消</a>
             </div>
         </div>
 
